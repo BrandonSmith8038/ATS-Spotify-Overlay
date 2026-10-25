@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms> <!-- only used for the tray icon -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>NowPlayingOverlay</RootNamespace>
+    <AssemblyName>ATSNowPlaying</AssemblyName>
+    <ApplicationIcon>icon.ico</ApplicationIcon> <!-- icon shown on the .exe in Explorer / Stream Deck -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Embedded so the tray icon works even when the exe is moved or published as a single file -->
+    <EmbeddedResource Include="icon.ico" LogicalName="icon.ico" />
+  </ItemGroup>
+
+</Project>
